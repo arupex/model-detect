@@ -1,0 +1,34 @@
+{
+  "name": "model-detect",
+  "version": "1.0.0",
+  "description": "Detect Model Versions based on properties within the models",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arupex/model-detect.git"
+  },
+  "keywords": [
+    "detect",
+    "model",
+    "version",
+    "property"
+  ],
+  "author": "dirwin517",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/arupex/model-detect/issues"
+  },
+  "homepage": "https://github.com/arupex/model-detect#readme",
+  "devDependencies": {
+    "assert-diff": "^1.0.1",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "deep-value": "^1.0.0"
+  }
+}

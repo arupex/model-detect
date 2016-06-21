@@ -6,9 +6,11 @@
  *
  * @type {Function}
  */
-module.exports = (function(){
+arupex_model_detect = (function(){
 
-    var deepValue = require('deep-value');
+    if(typeof arupex_deep_value === 'undefined' && typeof require !== 'undefined') {
+        arupex_deep_value = require('deep-value');
+    }
 
     /**
      * Sets Up a Model Detector via properties you want to exist in each model version (truthy)
@@ -34,7 +36,7 @@ module.exports = (function(){
 
                 var isThisModel = true;
                 versionRequirements.properties.forEach(function property(key){
-                    isThisModel = isThisModel && deepValue(obj, key);
+                    isThisModel = isThisModel && arupex_deep_value(obj, key);
                 });
 
                 if(isThisModel){
@@ -52,3 +54,7 @@ module.exports = (function(){
     return ModelDetector;
 
 })();
+
+if(typeof module !== 'undefined'){
+    module.exports = arupex_model_detect;
+}

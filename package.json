@@ -1,6 +1,6 @@
 {
   "name": "model-detect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Detect Model Versions based on properties within the models",
   "main": "index.js",
   "scripts": {
